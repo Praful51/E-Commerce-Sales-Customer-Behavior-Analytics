@@ -15,15 +15,15 @@ Database & Querying	= MYSQL
 Machine Learning = Scikit-learn (LogisticRegression & Random Forest)
 Dashboard	= Power BI
 Version Control	= Git, GitHub
----
+
 
 **Key Steps**
 
-1. Date Cleaning & Preprocessing
+**Date Cleaning & Preprocessing**
 
 Started with quick understanding of the data by viewing few of the first columns, checked for the datatypes looked for duplicate & missing values where payment method had null values which i imputed with **None** as to preserve those rows and maintain business logic consistency, since customers who did not complete a purchase would not have an associated payment method.
 
-3. Exploratory Data Analysis (EDA)
+ **Exploratory Data Analysis (EDA)**
    
 Analyzed revenue distribution across categories and regions
 
@@ -34,9 +34,8 @@ Analysed the return rate across categories for understanding which category had 
 Checked for the discount impact on orders to know if promotional(discounted) pricing played a major role in customer purchasing behavior 
 
 
-5. Hypothesis Testing (Statistics Layer)
 
-## 📊 Hypothesis Testing (Statistics Layer)
+##  Hypothesis Testing (Statistics Layer)
 
 Two statistical tests were performed to validate key business assumptions.
 
@@ -65,8 +64,6 @@ This is validated by the average revenue per segment being nearly identical:
 
 The difference between segments is too small to be statistically significant.
 
----
-
 ### Test 2 — Does discount affect revenue?
 **Method:** Independent t-test (`ttest_ind`)
 
@@ -86,28 +83,55 @@ Orders **without** discount generated higher average revenue than orders **with*
 | No Discount Applied | ₹9,465 |
 | Discount Applied | ₹7,764 |
 
-
-8. Power BI Dashboard
-
-Built a 4-page interactive dashboard:
-Page 1 — Sales Overview: KPIs, monthly trend, revenue by category
-Page 2 — Customer Intelligence: segment analysis, channel performance, return rates
-Page 3 — ML Predictions: purchase probability by segment, high-value customer table
-Page 4 — Hypothesis Test Summary: results and plain-English interpretations
----
-
 **Insights & Recommendations**
 
-1. [Category X] generated the highest average revenue at ₹[value], while [Category Y] had the lowest
-2. Loyal customers drove ₹[value] more revenue on average compared to New customers
-3. Revenue peaked in Q[X], suggesting seasonal demand patterns
-4. Applying a discount [did / did not] significantly affect purchase likelihood (p = [value])
+1. Product Category Performance
+[Category X] generated the highest average revenue at ₹[value], significantly outperforming [Category Y], which recorded the lowest average revenue contribution. This indicates strong customer demand and higher monetization potential within premium-performing categories.
 
-5.[Channel X] had the highest purchase rate at [value]%
-Recommendation: Increase marketing spend on top-performing channel and reduce investment in underperforming ones
-6. Returns
-[Region X] had the highest return rate at [value]%
-Recommendation: Investigate product quality or delivery issues in that region
+![category](image/rev_by_cat.png)
+
+Business Recommendation:
+Increase inventory allocation, targeted promotions, and cross-selling strategies for high-performing categories while reassessing pricing, assortment, or marketing strategy for underperforming categories.
+
+2. Customer Segment Contribution
+Loyal customers generated approximately ₹[value] higher average revenue compared to New customers, highlighting the strong lifetime value and purchasing power of retained customers.
+
+![cust_segment](image/cust_segment.png)
+
+Business Recommendation:
+Strengthen customer retention initiatives such as loyalty programs, personalized offers, and membership benefits to maximize repeat purchases and long-term revenue growth.
+
+3. Seasonal Revenue Trends
+Revenue peaked during Q[X], indicating clear seasonal purchasing behavior and periods of heightened customer demand across the business cycle.
+
+![trend](image/monthly_rev_trend.png)
+
+Business Recommendation:
+Optimize inventory planning, marketing campaigns, and staffing capacity ahead of peak-demand quarters to capitalize on seasonal sales opportunities and avoid stock shortages.
+
+4. Impact of Discounts on Purchase Conversion
+Customers receiving discounts demonstrated a significantly higher purchase rate (55.87%) compared to customers without discounts (31.15%), indicating that promotional pricing is strongly associated with increased customer conversion behavior.
+
+![discount](image/disc_impact.png)
+
+Business Recommendation:
+Implement targeted discount strategies focused on high-conversion customer groups while monitoring profitability to balance revenue growth with margin sustainability.
+
+5. Marketing Channel Effectiveness
+[Channel X] achieved the highest purchase conversion rate at [value]%, indicating superior effectiveness in driving customer engagement and completed purchases.
+
+![channel](image/marketing_channel.png)
+
+Business Recommendation:
+Increase marketing investment and campaign optimization efforts on high-performing acquisition channels while evaluating ROI improvements for lower-performing channels.
+
+6. Regional Return Analysis
+[Region X] recorded the highest return rate at [value]%, suggesting potential operational, product-quality, or customer expectation issues within that market.
+
+![region](image/return_region.png)
+
+Business Recommendation:
+Conduct deeper root-cause analysis on returns in the affected region by reviewing delivery performance, product quality, and customer feedback to reduce return-related losses and improve customer satisfaction.
 
 
 **Machine Learning Model**
@@ -162,8 +186,8 @@ Three approaches were evaluated:
 
 **Confusion Matrix:**
 Predicted →      0     1
-Actual 0   [  82   425 ]
-Actual 1   [  31   462 ]
+Actual 0       [  82   425 ]
+Actual 1       [  31   462 ]
 
 **Business Insight:** The model correctly identifies 462 out of 493 actual buyers.
 > In a marketing campaign, it is far more costly to miss a potential buyer than to
