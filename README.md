@@ -1,4 +1,4 @@
-# Ecommerce-Sales-Intelligence-System
+# E-Commerce Sales & Customer Behavior Analytics
 
 
 **Project Overview**
