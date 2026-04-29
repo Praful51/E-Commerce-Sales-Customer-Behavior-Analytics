@@ -49,17 +49,17 @@ Two statistical tests were performed to validate key business assumptions.
 | **H1** | Revenue is not equal and differs across customer segments |
 | **F-statistic** | 41.65399762337787 |
 | **p-value** | 1.14e-18 |
-| **Decision** | **Fail to Reject H0** (p > 0.05) |
+| **Decision** | ** Reject H0** (p < 0.05) |
 
 **Interpretation:**
-There is no statistical evidence that revenue differs across customer segments.
-This is validated by the average revenue per segment being nearly identical:
+Statistical evidence confirms that revenue is not equal & differs across customer segments.
+This is validated by the average revenue per segment & can be clearly seen that loyal segment is generating higher revenue in comparison to other segments
 
 | Segment | Avg Revenue |
 |---|---|
-| Loyal | ₹8,257.79 |
-| Returning | ₹8,265.98 |
-| New | ₹8,007.62 |
+| Loyal | 8076.99|
+| Returning | 5673.33|
+| New | 5200.28 |
 
 The difference between segments is too small to be statistically significant.
 
