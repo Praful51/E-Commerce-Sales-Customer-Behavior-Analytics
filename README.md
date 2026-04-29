@@ -3,7 +3,8 @@
 
 **Project Overview**
 
-This project simulates a real-world e-commerce analytics pipeline built on a synthetic dataset of 5,000 customer transactions. The goal is to understand customer purchase behavior, validate business hypotheses statistically, and predict future purchases using machine learning — all presented through an interactive Power BI dashboard.
+This project delivers a full-stack analytics solution for an e-commerce business,covering customer behavior analysis, statistical hypothesis testing, SQL-based
+querying & reporting, and machine learning — culminating in an interactive Power BI dashboard that translates data into actionable business decisions.
 
 **Tech Stack**
 
