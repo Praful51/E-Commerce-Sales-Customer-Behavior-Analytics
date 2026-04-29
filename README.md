@@ -1,7 +1,5 @@
 # Ecommerce-Sales-Intelligence-System
 
-An end-to-end data analytics project combining Python, SQL, Statistics, Machine Learning, and Power BI to extract actionable business insights from e-commerce transaction data.
----
 
 **Project Overview**
 
@@ -48,7 +46,7 @@ Two statistical tests were performed to validate key business assumptions.
 |---|---|
 | **H0** | Revenue is equal and does not differ across customer segments |
 | **H1** | Revenue is not equal and differs across customer segments |
-| **F-statistic** | *(your f_stat value)* |
+| **F-statistic** | 41.65399762337787 |
 | **p-value** | 1.14e-18 |
 | **Decision** | **Fail to Reject H0** (p > 0.05) |
 
@@ -195,6 +193,7 @@ Predicted →      0     1
 Actual 0       [  82   425 ]
 Actual 1       [  31   462 ]
 
-**Business Insight:** The model correctly identifies 462 out of 493 actual buyers.
-> In a marketing campaign, it is far more costly to miss a potential buyer than to
-> send an extra promotional message — making high recall on Class 1 the right objective.
+**Business Insight:** 
+
+- In a marketing campaign, it is far more costly to miss a potential buyer than to target an extra customer who does not convert
+- sending one unnecessary email costs almost nothing, but missing a ready buyer means lost revenue permanently.
