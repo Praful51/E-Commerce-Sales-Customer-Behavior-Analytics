@@ -61,7 +61,6 @@ This is validated by the average revenue per segment & can be clearly seen that 
 | Returning | 5673.33|
 | New | 5200.28 |
 
-The difference between segments is too small to be statistically significant.
 
 ### Test 2 — Does discount affect revenue?
 **Method:** Independent t-test (`ttest_ind`)
