@@ -157,12 +157,11 @@ discount_pct, month, quarter
 
 ### Models Trained & Compared
 
-| Model | Accuracy | Precision | Recall | F1-Score |
-|---|---|---|---|---|
-| Logistic Regression | 62.4% | 0.62 | 0.62 | 0.62 |
-| Random Forest (default) | 56.9% | 0.57 | 0.57 | 0.57 |
-| Random Forest (tuned) | 61.5% | 0.62 | 0.61 | 0.61 |
-| RF + Threshold (0.3) | 54.4% | 0.62 | 0.54 | 0.54 |
+Model	Accuracy	Precision (Class 1)	Recall (Class 1)	F1-Score (Class 1)
+Logistic Regression	62.4%	0.61	0.64	0.63
+Random Forest (Default)	56.9%	0.56	0.59	0.58
+Random Forest (Tuned)	61.5%	0.59	0.69	0.64
+Random Forest + Threshold Tuning (0.3)	54.4%	0.52	0.94	0.67
 
 ---
 
